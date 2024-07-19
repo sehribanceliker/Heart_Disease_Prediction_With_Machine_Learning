@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Attack Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button.submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button.submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Attack Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="LocationAbbr">LocationAbbr:</label>
+                <input type="text" id="LocationAbbr" name="LocationAbbr" required>
+            </div>
+
+            <div class="form-group">
+                <label for="GeographicLevel">Geographic Level:</label>
+                <select id="GeographicLevel" name="GeographicLevel" required>
+                    <option value="County">County</option>
+                    <option value="State">State</option>
+                    <option value="Nation">Nation</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Data_Value_Type">Data Value Type:</label>
+                <select id="Data_Value_Type" name="Data_Value_Type" required>
+                    <option value="Age-adjusted, Spatially Smoothed, 3-year Average Rate">Age-adjusted, Spatially Smoothed, 3-year Average Rate</option>
+                    <option value="Age-adjusted, 3-year Average Rate">Age-adjusted, 3-year Average Rate</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Stratification1">Stratification 1:</label>
+                <select id="Stratification1" name="Stratification1" required>
+                    <option value="Overall">Overall</option>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Stratification2">Stratification 2:</label>
+                <select id="Stratification2" name="Stratification2" required>
+                    <option value="Overall">Overall</option>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
+                    <option value="Hispanic">Hispanic</option>
+                    <option value="Asian and Pacific Islander">Asian and Pacific Islander</option>
+                    <option value="American Indian and Alaskan Native">American Indian and Alaskan Native</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
