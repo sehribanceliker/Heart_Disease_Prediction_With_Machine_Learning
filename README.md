@@ -1,7 +1,5 @@
 ## Heart Disease Mortality Data Among US Adults (35+) by State/Territory and County
 
- # Heart Disease Mortality Data Among US Adults (35+) by State/Territory and County
-
 This repository contains data and code related to analyzing and predicting heart disease mortality rates among US adults aged 35 and older, by state, territory, and county. Also, I created the backend and frontend for the application. Flask and HTML were used for the application and given data to predict high-risk heart disease, low-risk heart disease, etc.
 
  ## Data Description
